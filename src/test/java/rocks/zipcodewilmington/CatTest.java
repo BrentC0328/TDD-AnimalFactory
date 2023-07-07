@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
 
+import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -39,5 +40,52 @@ public class CatTest {
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
     }
+
+    @Test
+    public void setNameTest(){
+        //given
+        Cat cat = new Cat("bob", new Date(), 3);
+        String expected = "Lisa";
+        //when
+        cat.setName("Lisa");
+        String actual = cat.getName();
+        //then
+        Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void setBirthDateTest(){
+        //given
+        Cat cat = new Cat("bob", new Date(), 3);
+        //when
+        Date expected = new Date(2000, 11, 11);
+        cat.setBirthDate(new Date(2000, 11, 11));
+        Date actual = cat.getBirthDate();
+        //then
+        Assert.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void speakTest(){
+        //given
+        Cat cat = new Cat("bob", new Date(), 3);
+        //when
+        
+        //then
+    }
+    @Test
+    public void eatTest(){
+        //given
+        Cat cat = new Cat("bob", new Date(), 3);
+        //when
+        //then
+    }
+    @Test
+    public void getIdTest(){
+        //given
+        Cat cat = new Cat("bob", new Date(), 3);
+        //when
+        //then
+    }
+
 
 }
